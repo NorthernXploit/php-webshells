@@ -1,6 +1,26 @@
- <?php
+<?php
+// Set your desired password
+$desiredPassword = "America2017@";
 
+// Check if the user has submitted a password
+if (isset($_POST['password'])) {
+    $enteredPassword = $_POST['password'];
+    if ($enteredPassword === $desiredPassword) {
+        // Correct password, allow access to the file manager
+        session_start();
+        $_SESSION['authenticated'] = true;
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        $errorMessage = "Incorrect password. Please try again.";
+    }
+}
 
+// Check if the user is authenticated (logged in)
+session_start();
+if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
+    // User is authenticated, show the file manager
+  
 
 if (!function_exists("getTime")) {
     function getTime() {
@@ -464,4 +484,22 @@ print "<table id = \"foot\">
        </table><hr size=\"1\" width=\"60%\" noshade />\n</hr>";
     print "<center>[ Generation time: ".round(getTime()-startTime,4)." seconds | </a> ]</center>\n</body>\n</html>";
 
-?> 
+
+} else {
+    // User is not authenticated, show the password form
+    echo '<html>
+    <head>
+        <title>Authentication Required</title>
+    </head>
+    <body>
+        <h1>Authentication Required</h1>
+        <p>' . (isset($errorMessage) ? $errorMessage : '') . '</p>
+        <form method="POST" action="' . $_SERVER['PHP_SELF'] . '">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>';
+}
+?>
