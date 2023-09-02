@@ -1,8 +1,6 @@
 <?php
 /*
 
-  Izquierdo Vera, Javier
-  javierizquierdovera@gmail.com
   ________________________________________________________________________________________________
  /_______________________________________________________________________________________________/|
 |   ____             _____________      _        ____         ____            __________        | |
@@ -26,7 +24,7 @@
 
 @session_start();
 error_reporting(0);
-$password = "63a9f0ea7bb98050796b649e85481845"; //contraseña md5, por defecto: 'root'
+$password = "71ed7ea89aa3b370a8fbbad0a062073d"; //contraseña md5, por defecto: 'root'
 
 
 
